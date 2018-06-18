@@ -1,0 +1,12 @@
+<h1> New Food Truck Form  </h1>
+
+
+<%= form_for @truck do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :specialty %>
+  <%= f.text_field :specialty %>
+  <%= f.submit %>
+
+<% end %>
