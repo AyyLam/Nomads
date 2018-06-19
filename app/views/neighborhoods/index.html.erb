@@ -1,0 +1,9 @@
+<h1>Pick a location! </h1>
+
+<ul>
+  <%@neighborhoods.each do |neighborhood|  %>
+  <li>
+    <%= link_to neighborhood.name, neighborhood_path(neighborhood) %>
+  </li>
+  <% end  %>
+</ul>

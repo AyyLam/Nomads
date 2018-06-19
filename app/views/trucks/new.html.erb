@@ -7,6 +7,7 @@
   <br>
   <%= f.label :specialty %>
   <%= f.text_field :specialty %>
+  <%= f.collection_select :neighborhood_id, Neighborhood.all, :id, :name, prompt: "Select a neighborhood"%>
   <%= f.submit %>
 
 <% end %>

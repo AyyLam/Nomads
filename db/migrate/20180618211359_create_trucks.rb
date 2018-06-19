@@ -3,6 +3,7 @@ class CreateTrucks < ActiveRecord::Migration[5.2]
     create_table :trucks do |t|
       t.string :name
       t.string :specialty
+      t.integer :neighborhood_id
 
       t.timestamps null: false
     end

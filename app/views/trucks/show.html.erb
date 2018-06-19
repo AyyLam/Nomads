@@ -1,2 +1,21 @@
 <h1><%= @truck.name %></h1>
 <h3>Specializes in <%= @truck.specialty %></h3>
+
+<p>  <%@truck.reviews.each do |review|  %>
+  <br>
+  <br>
+  Written By:
+  <%= link_to review.user.name, user_path(review.user) %>
+  <br>
+  <br>
+  <br>
+  The rating:
+  <%= review.rating %>
+  <br>
+  <br>
+  <%= review.content %>
+  <br>
+  <br>
+  <% end %>
+
+</p>

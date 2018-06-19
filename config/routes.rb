@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :users
   resources :trucks
   resources :reviews, only: [:show, :new, :create]
+  resources :neighborhoods
 
   get 'login', to: 'sessions#new', as: 'login'
   post 'login', to: 'sessions#create', as: 'session'
