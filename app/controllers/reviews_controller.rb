@@ -1,4 +1,6 @@
 class ReviewsController < ApplicationController
+  before_action :authorized
+
 
   def show
     @review=Review.find(params[:id])
@@ -10,19 +12,19 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review=Review.new(review_params)
-
+    @review=Review.new(user_id: @user.id, truck_id: params[:review][:truck_id], content: params[:review][:content], rating: params[:review][:rating])
     if @review.valid?
+
       @review.save
-      redirect_to review_path(@review)
+      redirect_to user_path(@review.user)
     else
-      render :new
+      redirect_to new_review_path
     end
   end
 
   private
   def review_params
-    params.require(:review).permit(:truck)
+    params.require(:review).permit(:content, :truck_id, :rating)
   end
 
 end

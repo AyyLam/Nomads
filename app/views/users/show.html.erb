@@ -1,1 +1,19 @@
-<h1><%= @user.name %></h1>
+ <h1><%= @user.name %></h1>
+<ul>
+  <% @user.reviews.each do |review| %>
+  <p>
+    <h2>Truck Name</h2>
+
+    <br>
+    <%= review.truck.name %>
+    <br>
+    <h2>Content</h2>
+    <br>
+    <%= review.content %>
+  </p>
+  <% end %>
+  <br>
+  <br>
+  <br>
+
+</ul>
