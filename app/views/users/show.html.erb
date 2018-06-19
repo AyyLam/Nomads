@@ -1,13 +1,12 @@
  <h1><%= @user.name %></h1>
 <ul>
+  <h1>My Reviews</h1>
   <% @user.reviews.each do |review| %>
   <p>
-    <h2>Truck Name</h2>
-
+    <h2><%= link_to review.truck.name, truck_path(review.truck) %></h2>
     <br>
-    <%= review.truck.name %>
+    My rating: <%= review.rating  %>
     <br>
-    <h2>Content</h2>
     <br>
     <%= review.content %>
   </p>
