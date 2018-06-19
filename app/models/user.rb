@@ -6,4 +6,8 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :email, presence: true
   validates :email, uniqueness: true
+
+  def most_recent
+    self.reviews = self.reviews.order(id: :desc)
+  end
 end

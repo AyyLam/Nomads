@@ -25,6 +25,7 @@ class TrucksController < ApplicationController
     end
   end
 
+
   private
   def truck_params
     params.require(:truck).permit(:name, :specialty, :neighborhood_id)

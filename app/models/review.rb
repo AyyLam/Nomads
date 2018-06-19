@@ -6,4 +6,6 @@ class Review < ApplicationRecord
   validates :content, length: {minimum: 0, maximum: 1500}
   validates :rating, presence: true
 
+  
+
 end
