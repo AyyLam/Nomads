@@ -12,7 +12,7 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review=Review.new(user_id: @user.id, truck_id: params[:review][:truck_id], content: params[:review][:content], rating: params[:review][:rating])
+    @review=Review.new(user_id: @user.id, truck_id: params[:review][:truck_id], content: params[:review][:content], rating: params[:review][:rating], image: params[:review][:image])
     if @review.valid?
 
       @review.save
@@ -24,7 +24,7 @@ class ReviewsController < ApplicationController
 
   private
   def review_params
-    params.require(:review).permit(:content, :truck_id, :rating)
+    params.require(:review).permit(:content, :truck_id, :rating, :image)
   end
 
 end

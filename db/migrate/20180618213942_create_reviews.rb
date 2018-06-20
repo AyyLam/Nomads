@@ -5,6 +5,7 @@ class CreateReviews < ActiveRecord::Migration[5.2]
       t.integer :truck_id
       t.integer :rating
       t.string :content
+      t.string :image
     end
   end
 end

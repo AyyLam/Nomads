@@ -12,7 +12,7 @@ User.create(name: "Angelina", email: "angelina@nomads.com", password: "1234")
 User.create(name: "Eric", email: "eric@nomads.com", password: "1234")
 User.create(name: "Malorie", email: "malorie@nomads.com", password: "1234")
 
-
+Neighborhood.create(name: "Dumbo")
 Truck.create(name: "Halal Cart Dumbo", specialty: "Halal", neighborhood_id: 1)
 Truck.create(name: "Ming's Wok", specialty: "Chinese", neighborhood_id: 1)
 Truck.create(name: "Kimchi Winchi", specialty: "Korean", neighborhood_id: 1)

@@ -1,3 +1,5 @@
+<h1>Review Form </h1>
+
 <%= form_for @review do |f| %>
 <br>
 <%= f.label :truck %>
@@ -15,6 +17,8 @@
 <%= f.text_area :content, size: "60x12", placeholder: "What do you want to say?" %>
 <br>
 <br>
+<%= f.label :image %>
+<%= f.file_field :image %>
 <br>
 <%= f.submit "Post" %>
 <% end %>

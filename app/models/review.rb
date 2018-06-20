@@ -1,4 +1,5 @@
 class Review < ApplicationRecord
+  mount_uploader :image, ImageUploader
   belongs_to :truck
   belongs_to :user
 
@@ -6,6 +7,6 @@ class Review < ApplicationRecord
   validates :content, length: {minimum: 0, maximum: 1500}
   validates :rating, presence: true
 
-  
+
 
 end
