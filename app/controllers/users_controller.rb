@@ -15,7 +15,7 @@ class UsersController < ApplicationController
       @user.save
       redirect_to user_path(@user)
     else
-      render :new
+      redirect_to new_user_path
     end
   end
 

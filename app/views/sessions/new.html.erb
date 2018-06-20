@@ -1,8 +1,15 @@
 <%= form_tag controller: 'sessions', action: 'create', method: 'post' do %>
   <!-- <input type="text" > -->
+
+  <h2>Log in to Nomads</h2>
+  <br>
   <%= label_tag :email %>
+  <br>
   <%= email_field_tag :email %>
+  <br><br>
   <%= label_tag :password %>
+  <br>
   <%= password_field_tag :password %>
+  <br><br>
   <%= submit_tag 'Login' %>
 <% end %>

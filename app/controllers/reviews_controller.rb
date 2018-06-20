@@ -12,9 +12,8 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review=Review.new(user_id: @user.id, truck_id: params[:review][:truck_id], content: params[:review][:content], rating: params[:review][:rating], image: params[:review][:image])
+    @review=Review.new(user_id: @curr_user.id, truck_id: params[:review][:truck_id], content: params[:review][:content], rating: params[:review][:rating], image: params[:review][:image])
     if @review.valid?
-
       @review.save
       redirect_to user_path(@review.user)
     else

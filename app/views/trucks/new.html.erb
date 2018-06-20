@@ -3,11 +3,19 @@
 
 <%= form_for @truck do |f| %>
   <%= f.label :name %>
-  <%= f.text_field :name %>
   <br>
+  <%= f.text_field :name %>
+  <br><br>
   <%= f.label :specialty %>
+  <br>
   <%= f.text_field :specialty %>
-  <%= f.collection_select :neighborhood_id, Neighborhood.all, :id, :name, prompt: "Select a neighborhood"%>
+  <br><br>
+  <%= f.label "Neighborhood" %>
+  <br><br>
+  <%= f.collection_select :neighborhood_id, Neighborhood.all, :id, :name, prompt: "Select one"%>
+  <br>
+  <br>
+  <br>
   <%= f.submit %>
 
 <% end %>
