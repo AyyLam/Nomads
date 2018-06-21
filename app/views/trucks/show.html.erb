@@ -1,5 +1,6 @@
-<h1 class="title"><%= @truck.name %></h1>
-<h2>Specializes in <%= @truck.specialty %></h2>
+<h1><%= @truck.name %></h1>
+<h3>Find us in <%=link_to @truck.neighborhood.name, neighborhood_path(@truck.neighborhood) %>!</h3>
+<h3>Specializes in <%= @truck.specialty %></h3>
 
 <h4 class="link"> <%= link_to "Review Us!", new_review_path %></h4>
 
