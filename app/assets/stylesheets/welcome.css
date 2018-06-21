@@ -1,0 +1,29 @@
+.centerimage{
+  height:400px;
+  margin:0 auto;
+  display:block;
+  position:relative;
+  animation-name: image-animation;
+  animation-duration:2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes image-animation {
+  0% {
+    left:-50%;
+    opacity:0;
+  }
+  70% {
+    left:0%;
+    opacity:1;
+  }
+  80% {
+    transform:scale(1);
+  }
+  90%{
+    transform:scale(1.15);
+  }
+  100%{
+    transform:scale(1);
+  }
+}

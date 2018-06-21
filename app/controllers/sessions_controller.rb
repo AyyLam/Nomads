@@ -7,13 +7,13 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by(email: params[:email])
-    # Does that user exist? && does it match the authorization
-    if @user && @user.authenticate(params[:password])
+    @curr_user = User.find_by(email: params[:email])
+    # Does that curr_user exist? && does it match the authorization
+    if @curr_user && @curr_user.authenticate(params[:password])
       # byebug
-      session[:user_id] = @user.id
+      session[:user_id] = @curr_user.id
 
-      redirect_to user_path(@user)
+      redirect_to user_path(@curr_user)
     else
       redirect_to login_path
     end

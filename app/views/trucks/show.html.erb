@@ -3,6 +3,7 @@
 
 <h4><%= link_to "Review Us!", new_review_path %></h4>
 
+
 <p>  <%@truck.most_recent.each do |review|  %>
   <br>
   <br>
@@ -20,5 +21,4 @@
   <br>
   <%= image_tag review.image_url.to_s if review.image_url.present? %>
   <% end %>
-
 </p>

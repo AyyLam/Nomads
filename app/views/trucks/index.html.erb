@@ -1,9 +1,14 @@
+
 <h1>All Food Trucks! </h1>
 
-<ul>
-  <%@trucks.each do |truck|  %>
-  <li>
-    <%= link_to truck.name, truck_path(truck) %>
-  </li>
-  <% end  %>
-</ul>
+<div>
+  <h3>
+    <ul>
+    <%@trucks.each do |truck|  %>
+    <li class="bullets">
+      <%= link_to truck.name, truck_path(truck) %>
+    </li>
+    <% end  %>
+    </ul>
+  </h3>
+</div>

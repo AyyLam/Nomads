@@ -1,8 +1,21 @@
+
 <%= form_tag controller: 'sessions', action: 'create', method: 'post' do %>
   <!-- <input type="text" > -->
-  <%= label_tag :email %>
-  <%= email_field_tag :email %>
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
-  <%= submit_tag 'Login' %>
+  <h1><%= "Login " %></h1>
+  <br>
+  <div class=signin>
+   <%= label_tag :email%>
+   <br>
+    <%= email_field_tag :email, nil, class: "formlabel" %>
+    <br>
+    <br>
+    <br>
+    <%= label_tag :password %>
+    <br>
+    <%= password_field_tag :password, nil, class: "formlabel"  %>
+    <br>
+    <br>
+    <%= submit_tag 'Login', class: "submit" %>
+    </div>
+
 <% end %>

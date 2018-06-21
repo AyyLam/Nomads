@@ -2,8 +2,11 @@
 
 <ul>
   <%@neighborhoods.each do |neighborhood|  %>
-  <li>
-    <%= link_to neighborhood.name, neighborhood_path(neighborhood) %>
-  </li>
+  <h3>
+    <li>
+      <%= link_to neighborhood.name, neighborhood_path(neighborhood) %>
+    </li>
+  </h3>
+
   <% end  %>
 </ul>

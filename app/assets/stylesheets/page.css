@@ -1,0 +1,58 @@
+/* standard page layout  */
+
+h1 {
+  text-align: center;
+  color: #FF6E40;
+}
+
+h2 {
+  text-align: center;
+  color: #607D8B;
+}
+
+body {
+  background-color: #efeeea;
+  margin:0;
+}
+
+* {
+  font-family: Avenir;
+
+}
+
+h3 {
+  text-align: center;
+  color: #4aa4a3;
+}
+/* standard page layout finished */
+
+/* sign in form  */
+.signin  {
+  width:fit-content;
+  margin:0 auto;
+  color: #4aa4a3;
+}
+
+.formlabel {
+
+  border-radius: 5px;
+  border: none;
+
+}
+
+.submit {
+  border-radius: 5px;
+  color: white;
+  background-color: #4aa4a3;
+  padding: 6px 14px;
+  font-size: 13px;
+  border: none;
+  text-align: center
+
+}
+/* sign in form finished */
+.bullets {
+  list-style-type: none;
+  margin: 0 auto;
+
+}
