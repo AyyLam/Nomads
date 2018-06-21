@@ -5,10 +5,10 @@
   <h3>
     <ul>
     <%@trucks.each do |truck|  %>
-    <li class="bullets">
+    <li>
       <%= link_to truck.name, truck_path(truck) %>
     </li>
     <% end  %>
-    </ul>
+  </ul>
   </h3>
 </div>
