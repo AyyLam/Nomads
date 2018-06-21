@@ -2,8 +2,6 @@
 
   <ul>
     <% @neighborhood.trucks.each do |truck| %>
-    <h3>
-    <li><%= link_to truck.name, truck_path(truck) %></li>
-    </h3>
+    <li class="list"><%= link_to truck.name, truck_path(truck) %></li>
     <%end  %>
   </ul>

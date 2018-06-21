@@ -19,7 +19,7 @@ class TrucksController < ApplicationController
 
     if @truck.valid?
       @truck.save
-      redirect_to truck_path(@truck)
+      redirect_to new_review_path
     else
       redirect_to new_truck_path
     end

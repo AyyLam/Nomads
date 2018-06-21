@@ -21,7 +21,7 @@ body {
 }
 
 h3 {
-  text-align: center;
+  text-align: center
   color: #4aa4a3;
 }
 /* standard page layout finished */
@@ -51,8 +51,22 @@ h3 {
 
 }
 /* sign in form finished */
-ul {
-  list-style-type: none;
-  margin: 0 auto;
 
+/* listed items */
+.list {
+  list-style-type: none;
+  width:fit-content;
+  margin:0 auto;
+  font-weight :bold
+  padding: 0;
+}
+.list a {
+  text-decoration: none;
+  color: #4aa4a3;
+  padding: 14px 16px;
+}
+
+.list a:hover {
+  color: #FF6E40;
+  transform: scale(1.2);
 }
