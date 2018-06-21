@@ -8,6 +8,11 @@
       <h2><%= link_to review.truck.name, truck_path(review.truck) %></h2>
       <br>
       My rating: <%= review.rating  %>
+      <br>
+      <% if @curr_user == @user %>
+        <%= link_to "Edit", edit_review_path(review)%>
+        <%= link_to "Delete", review_path(review), :data => {:confirm => "You sure?", :method => "delete"} %>
+      <% end %>
     </div>
 
     <div class="grid-item">
