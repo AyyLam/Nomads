@@ -21,7 +21,7 @@ class TrucksController < ApplicationController
       @truck.save
       redirect_to truck_path(@truck)
     else
-      redirect_to new_user_path
+      redirect_to new_truck_path
     end
   end
 
