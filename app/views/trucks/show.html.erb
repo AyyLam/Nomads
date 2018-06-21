@@ -3,22 +3,22 @@
 
 <h4><%= link_to "Review Us!", new_review_path %></h4>
 
+<div class="grid-container">
+  <%@truck.most_recent.each do |review|  %>
+    <div class="grid-item">
+      Written By:
+      <%= link_to review.user.name, user_path(review.user) %>
+      <br>
+      Rating:
+      <%= review.rating %>
+    </div>
 
-<p>  <%@truck.most_recent.each do |review|  %>
-  <br>
-  <br>
-  Written By:
-  <%= link_to review.user.name, user_path(review.user) %>
-  <br>
-  <br>
-  <br>
-  The rating:
-  <%= review.rating %>
-  <br>
-  <br>
-  <%= review.content %>
-  <br>
-  <br>
-  <%= image_tag review.image_url.to_s if review.image_url.present? %>
-  <% end %>
-</p>
+    <div class="grid-item">
+      <%= review.content %>
+    </div>
+
+    <div class="grid-item">
+        <%= image_tag (review.image.url) if review.image? %>
+    </div>
+    <% end %>
+</div>
