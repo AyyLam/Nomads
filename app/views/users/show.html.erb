@@ -1,7 +1,9 @@
- <h2><%= @user.name %></h2>
- <%= link_to "Create A New Review", new_review_path %>
+ <h1 class="title"><%= @user.name %></h1>
+ <div class="link">
+    <%= link_to "Create A New Review", new_review_path %>
+ </div>
 
-  <h1>My Reviews</h1>
+  <h2>My Reviews</h2>
   <div class="grid-container">
   <% @user.most_recent.each do |review| %>
     <div class="grid-item">

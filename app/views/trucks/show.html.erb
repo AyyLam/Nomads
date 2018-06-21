@@ -1,7 +1,7 @@
-<h1><%= @truck.name %></h1>
-<h3>Specializes in <%= @truck.specialty %></h3>
+<h1 class="title"><%= @truck.name %></h1>
+<h2>Specializes in <%= @truck.specialty %></h2>
 
-<h4><%= link_to "Review Us!", new_review_path %></h4>
+<h4 class="link"> <%= link_to "Review Us!", new_review_path %></h4>
 
 <div class="grid-container">
   <%@truck.most_recent.each do |review|  %>
