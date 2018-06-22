@@ -1,18 +1,30 @@
 /* standard page layout  */
 
 .title {
+  padding: 10px;
   width:fit-content;
   margin:0 auto;
   color: #FF6E40;
   font-size: 40px;
   text-transform: capitalize
+}
+.average_rating {
+  color: #607D8B;
+  list-style-type: none;
+  font-weight :bold
+  padding: 0;
+  /* width:fit-content; */
+  margin:0 auto;
+  /* text-align: right; */
+  /* padding: 10px 70px; */
+  color: tomato
 
 }
 
-h2 {
-  text-align: center;
-  color: #607D8B;
-
+.rating {
+  font-size: 30px;
+  color: #FF6E40;
+  text-decoration:none
 }
 
 body {
@@ -25,10 +37,22 @@ body {
 
 }
 
-h3 {
-  text-align: center
-  color: #4aa4a3;
+
+.titletoo {
+  /* text-align: center */
+  color: #607D8B;
+  list-style-type: none;
+  font-weight :bold
+  padding: 0;
+  width:fit-content;
+  margin:0 auto;
+  text-decoration: none;
 }
+
+  .titletoo a:hover {
+    color: #FF6E40;
+    transform: scale(1.2);
+  }
 /* standard page layout finished */
 
 /* sign in form  */
@@ -101,18 +125,28 @@ h3 {
 }
 
 /* display reviews page */
+/* review grid  */
 .grid-item img {
-  height:250px;
-  width: 200px;
+  height: auto;
+  width: auto;
+  max-height: 250px;
+  max-width: 250px;
   text-align: right;
+  transition: transform 1s;
+}
 
+.grid-item img:hover {
+  transform:scale(1.25)
 }
 .grid-container {
   display: grid;
   grid-row-gap: 50px;
-  grid-template-columns: 300px 430px auto;
+  grid-template-columns: 1fr 1fr 1fr;
   background-color: ##efeeea;
   padding: 19px;
+  justify-content: center;
+
+
 }
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
@@ -123,14 +157,34 @@ h3 {
   text-align: center;
   margin-top: 8px;
   vertical-align: middle;
-
+  border-radius: 5px;
 }
 .grid-item a {
+  align-self: center;
   text-decoration :none;
   color: #4aa4a3;
+
 }
 
 .grid-item a:hover {
   color: #FF6E40;
   transform: scale(1.2);
 }
+/* review grid finished */
+/* display grid */
+.grid-container-too {
+  display: grid;
+  grid-row-gap: 70px;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: ##efeeea;
+  padding: 10px
+
+  justify-content: center;}
+
+.grid-item-too {
+  background-color: #efeeea
+  color: #4aa4a3;
+  text-align: center;
+  margin-top: 20px;
+  vertical-align: middle;
+  border-radius: 5px;}

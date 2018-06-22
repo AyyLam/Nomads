@@ -11,4 +11,15 @@ class Truck < ApplicationRecord
   def most_recent
     self.reviews = self.reviews.order(id: :desc)
   end
+
+  def avg_rating
+    total=0.0
+    counter=0
+    self.reviews.each_with_index do |review|
+      total+=review.rating
+      counter+=1
+    end
+    total/=counter
+    total.round(2)
+  end
 end

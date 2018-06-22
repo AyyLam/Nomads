@@ -3,17 +3,22 @@
     <%= link_to "Create A New Review", new_review_path %>
  </div>
 
-  <h2>My Reviews</h2>
+  <h2 class="titletoo">My Reviews</h2>
   <div class="grid-container">
   <% @user.most_recent.each do |review| %>
     <div class="grid-item">
       <h2><%= link_to review.truck.name, truck_path(review.truck) %></h2>
       <br>
-      My rating: <%= review.rating  %>
+      My rating:
+      <br>
+      <div class="rating">
+          <%= review.rating%>
+      </div>
+      <br>
       <br>
       <% if @curr_user == @user %>
         <%= link_to "Edit", edit_review_path(review)%>
-        <%= link_to "Delete", review_path(review), :data => {:confirm => "You sure?", :method => "delete"} %>
+        <%= link_to "Delete", review_path(review), :data => {:confirm => "You sure dawg?", :method => "delete"} %>
       <% end %>
     </div>
 

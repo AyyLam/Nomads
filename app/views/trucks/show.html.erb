@@ -1,8 +1,17 @@
-<h1><%= @truck.name %></h1>
-<h3>Find us in <%=link_to @truck.neighborhood.name, neighborhood_path(@truck.neighborhood) %>!</h3>
-<h3>Specializes in <%= @truck.specialty %></h3>
-
-<h4 class="link"> <%= link_to "Review Us!", new_review_path %></h4>
+<h1 class="title"><%= @truck.name %> </h1>
+<br>
+<h3 class="titletoo">Specializes in <%= @truck.specialty %></h3>
+<div class="grid-container-too">
+  <div class="grid-item-too">
+    <h2  class="titletoo", style: "font-size:30px">Find us in <%=link_to @truck.neighborhood.name, neighborhood_path(@truck.neighborhood), class:"titletoo"%>!</h2>
+  </div>
+  <div class="grid-item-too">
+    <h2  class="titletoo", style: "font-size:30px"> <%= link_to "Review Us!", new_review_path , class:"titletoo"%></h2>
+  </div>
+  <div class="grid-item-too">
+    <h1 class="average_rating">Rating: <%= @truck.avg_rating %></h1>
+  </div>
+</div>
 
 <div class="grid-container">
   <%@truck.most_recent.each do |review|  %>
@@ -10,8 +19,14 @@
       Written By:
       <%= link_to review.user.name, user_path(review.user) %>
       <br>
+      <br>
       Rating:
-      <%= review.rating %>
+
+      <br>
+      <div class="rating">
+        <%= review.rating %>
+      </div>
+
     </div>
 
     <div class="grid-item">
