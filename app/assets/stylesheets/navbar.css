@@ -29,3 +29,25 @@
   .nav-bar-items a:active {
     background-color: white;
   }
+
+.search {
+
+  /* float: right; */
+  float: left;
+  padding: 0px 60px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 20px;
+  text-size: 20px;
+  /* width: 200px; */
+}
+/* .search span {
+  display: block;
+  overflow: hidden;
+   padding: 0 4px 0 0;
+}
+
+ .search span input {
+   width: 100%;
+ } */

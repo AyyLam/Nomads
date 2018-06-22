@@ -5,11 +5,16 @@
     <li class= "nav-bar-items"> <%= link_to "Trucks", trucks_path %>  </li>
     <li class= "nav-bar-items">  <%= link_to "Neighborhoods", neighborhoods_path %>  </li>
 
-    
+    <div class="search">
+      <span>
+      <%= form_tag(trucks_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Trucks", size:"100", maxlength: "25" %>
+      <%= submit_tag "Search", :name => nil, class: "submit"%>
+      <% end %></span>
+    </div>
+
 
     <% if logged_in? %>
-
-
     <li class= "nav-bar-items" style="float:right">  <%= link_to "Logout", logout_path, method: :delete %>  </li>
     <li class="nav-bar-items" style="float:right; text-transform:capitalize" > <%= link_to @curr_user.name, user_path(@curr_user) %> </li>
     <% else %>
