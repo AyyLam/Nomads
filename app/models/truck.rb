@@ -5,6 +5,7 @@ class Truck < ApplicationRecord
 
   validates :name, presence: true
   validates :name, uniqueness: true
+  validates :name, length: {minimum: 2, maximum: 40}
   validates :specialty, length: {minimum: 2, maximum: 30}
   validates :specialty, presence: true
 

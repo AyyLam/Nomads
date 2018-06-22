@@ -37,3 +37,36 @@
   animation-duration:2s;
   animation-fill-mode: forwards; */
 }
+
+
+.movingdesc{
+  color: #3e5070;
+  height:50px;
+  margin:0 auto;
+  display:block;
+  position:relative;
+  animation-name: desc-animation;
+  animation-duration:4s;
+  animation-fill-mode: forwards;
+  text-align:center;
+}
+
+
+@keyframes desc-animation {
+  0% {
+    /* left:-500%; */
+    opacity:0;
+}
+  50% {
+    left:0%;
+    opacity:0;
+}
+  60% {
+    left:0%;
+    opacity:0.3;
+  }
+  80% {
+    left:0%;
+    opacity:0.7;
+  }
+}
