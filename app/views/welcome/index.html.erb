@@ -11,6 +11,11 @@
     <%= image_tag asset_path("flatdesign.jpg"), class: "centerimage" %>
     <br>
 
+    <%= form_tag(trucks_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Trucks" %>
+    <%= submit_tag "Search", :name => nil %>
+    <% end %>
+
     <h2>Source for all your Food Truck Needs</h2>
 
   </body>

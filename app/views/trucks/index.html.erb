@@ -1,6 +1,9 @@
 
 <h1 class="title">All Food Trucks! </h1>
   <ul>
+    <% if @trucks.blank? %>
+      <h4>There are no trucks containing the term <%= params[:search] %>.</h4>
+    <% end %>
     <%@trucks.each do |truck|  %>
     <li class="list">
       <%= link_to truck.name, truck_path(truck) %>

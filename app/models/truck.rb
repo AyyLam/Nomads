@@ -11,4 +11,8 @@ class Truck < ApplicationRecord
   def most_recent
     self.reviews = self.reviews.order(id: :desc)
   end
+
+  def self.search(search)
+    where("name LIKE ?", "%#{search}%") 
+  end
 end
