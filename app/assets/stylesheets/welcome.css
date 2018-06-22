@@ -1,5 +1,5 @@
 .centerimage{
-  height:400px;
+  height:350px;
   margin:0 auto;
   display:block;
   position:relative;
@@ -26,4 +26,14 @@
   100%{
     transform:scale(1);
   }
+}
+
+.logoimage{
+  height:140px;
+  margin:0 auto;
+  display:block;
+  position:relative;
+  /* animation-name: image-animation;
+  animation-duration:2s;
+  animation-fill-mode: forwards; */
 }
