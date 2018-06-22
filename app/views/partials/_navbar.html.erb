@@ -4,7 +4,11 @@
     <li class= "nav-bar-items"><a href="/">Home</a></li>
     <li class= "nav-bar-items"> <%= link_to "Trucks", trucks_path %>  </li>
     <li class= "nav-bar-items">  <%= link_to "Neighborhoods", neighborhoods_path %>  </li>
+
+    
+
     <% if logged_in? %>
+
 
     <li class= "nav-bar-items" style="float:right">  <%= link_to "Logout", logout_path, method: :delete %>  </li>
     <li class="nav-bar-items" style="float:right; text-transform:capitalize" > <%= link_to @curr_user.name, user_path(@curr_user) %> </li>

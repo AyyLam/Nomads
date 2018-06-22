@@ -21,5 +21,9 @@ class Truck < ApplicationRecord
     end
     total/=counter
     total.round(2)
+
+  def self.search(search)
+    where("name LIKE ?", "%#{search}%")
+
   end
 end

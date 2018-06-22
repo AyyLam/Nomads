@@ -2,6 +2,11 @@ class TrucksController < ApplicationController
 
   def index
     @trucks=Truck.all
+    if params[:search]
+      @trucks = Truck.search(params[:search]).order("created_at DESC")
+    else
+      @trucks = Truck.all.order("created_at DESC")
+    end
     render :index
   end
 
