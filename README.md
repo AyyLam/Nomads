@@ -1,24 +1,7 @@
-# README
+# Nomads
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Nomads is the Yelp for food trucks and street carts. Users can select/create a truck/cart, leave reviews and ratings, and explore other users' profiles 
 
-Things you may want to cover:
+Created using Ruby, Ruby on Rails, and SQLite. 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Made by Anthony Lam and Jee Graeff for our Mod 2 Project at The Flatiron School //
